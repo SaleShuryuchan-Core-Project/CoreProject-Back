@@ -7,7 +7,7 @@
 
   <!-- 주문상세 전체 조회 -->
   <select id="selectAllDetails" resultType="com.smhrd.model.OrderDetailsDTO">
-    SELECT * FROM TB_ORDER_DETAILS
+    SELECT * FROM TB_ORDER
   </select>
 
   <!-- 주문상세 상태 업데이트 -->
@@ -18,7 +18,7 @@
   </update>
 
   <!-- 주문정보 상태도 함께 업데이트 -->
-  <update id="updateMainOrderStatus">
+  <update id="updateMainOrderStatus" >
     UPDATE TB_ORDER
     SET ORDER_STATUS = #{order_status}
     WHERE ORDER_IDX = #{order_idx}

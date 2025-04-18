@@ -11,7 +11,7 @@
   </select> -->
   
   	<select id="selectProducts" parameterType="String" resultType="com.smhrd.model.ProductDTO">
-  		select * from TB_PRODUCT where P_NAME=#{phone}
+  		select * from TB_PRODUCT where P_NAME=#{phone} and P_STATUS != "판매완료"
   	</select>
 	
 	<select id="detail" parameterType="String" resultType="com.smhrd.model.PruductDetailDTO">

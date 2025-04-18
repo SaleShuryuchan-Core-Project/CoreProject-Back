@@ -5,6 +5,14 @@
 
 	<!-- DispatcherServlet와 그 외 설정 파일들을 관리(요청, 응답, 정의)하는 파일 -->
 
+	<filter>
+		<filter-name>CorsFilter</filter-name>
+		<filter-class>com.smhrd.config.CORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<!-- The definition of the Root Spring Container shared by all Servlets 
 		and Filters -->
@@ -38,14 +46,6 @@
 	</servlet-mapping>
 
 
-	<filter>
-		<filter-name>CorsFilter</filter-name>
-		<filter-class>com.smhrd.config.CORSFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>CorsFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
 
 
 

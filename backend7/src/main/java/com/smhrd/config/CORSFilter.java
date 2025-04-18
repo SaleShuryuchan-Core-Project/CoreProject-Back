@@ -1,23 +1,3 @@
-//package com.smhrd.config;
-//
-//import javax.servlet.*;
-//import javax.servlet.http.HttpServletResponse;
-//import java.io.IOException;
-//
-//public class CORSFilter implements Filter {
-//
-//    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-//            throws IOException, ServletException {
-//        HttpServletResponse res = (HttpServletResponse) response;
-//        res.setHeader("Access-Control-Allow-Origin", "*"); // 모든 도메인 허용 (개발 중일 때만)
-//        res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-//        res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//        chain.doFilter(request, response);
-//    }
-//
-//    public void init(FilterConfig filterConfig) {}
-//    public void destroy() {}
-//}
 package com.smhrd.config;
 
 import javax.servlet.*;

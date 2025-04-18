@@ -61,7 +61,7 @@
 
 	<select id="orderProduct" parameterType="String"
 		resultType="com.smhrd.model.PruductDetailDTO">
-		select * from TB_PRODUCT where P_IDX=#{order_idx}
+		select * from TB_PRODUCT where P_IDX=#{p_idx}
 	</select>
 
 	<select id="req" parameterType="String"
@@ -96,13 +96,13 @@
 		DISCOUNT_AMOUNT, PAY_AMOUNT,
 		PAY_METHOD, PAID_AMOUNT, ORDER_STATUS,
 		DELIVERY_COMPANY, ORDER_MSG,
-		CREATED_AT)
+		CREATED_AT, P_IDX)
 		VALUES (#{u_id},
 		#{total_amount}, #{discount_amount}, #{pay_amount},
 		#{pay_method},
 		#{paid_amount}, #{order_status}, #{delivery_company},
 		#{order_msg},
-		NOW())
+		NOW(),#{p_idx})
 	</insert>
 
 	<update id="updateProductStatusToSold" parameterType="list">

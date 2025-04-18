@@ -26,9 +26,9 @@ public class OrderDetailsController {
     public String updateOrderStatus(@RequestBody OrderDetailsDTO dto) {
         System.out.println("📦 받은 요청 DTO: " + dto);
         try {
-            int result1 = mapper.updateOrderStatus(dto);
+//            int result1 = mapper.updateOrderStatus(dto);
             int result2 = mapper.updateMainOrderStatus(dto.getOrder_idx(), dto.getOrder_status());
-            return (result1 > 0 && result2 > 0) ? "success" : "fail";
+            return (result2 > 0) ? "success" : "fail";
         } catch (Exception e) {
             e.printStackTrace(); // 🔥 에러 전체 출력
             return "fail";

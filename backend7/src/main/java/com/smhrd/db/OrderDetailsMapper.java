@@ -13,6 +13,6 @@ public interface OrderDetailsMapper {
     public List<OrderDetailsDTO> selectAllDetails();
 
     // 주문상태 수정
-    int updateOrderStatus(OrderDetailsDTO dto);
-    int updateMainOrderStatus(@Param("order_idx") int order_idx, @Param("order_status") String order_status);  // 이거 추가
+    public int updateOrderStatus(OrderDetailsDTO dto);
+    public int updateMainOrderStatus(@Param("order_idx") int order_idx, @Param("order_status") String order_status);  // 이거 추가
 }
